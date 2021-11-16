@@ -5,7 +5,8 @@ $query_view=mysqli_query($koneksi,"select * from barang");
 ?>
 </br>
 <h4>DATA BARANG </h4>
-<a href="input_barang.php" class="btn btn-danger">tambah katagori</a>
+<a href="input_barang.php" class="btn btn-danger">tambah katagori</a>|
+<a href="index.php" class="btn btn-danger">logout</a>
 <table class="table table-bordered" border="1">
     <tr>
         <td>No</td>

@@ -5,6 +5,7 @@ $query_view=mysqli_query($koneksi,"select * from katagori");
 ?>
 </br>
 <a href="input_katagori.php" class="btn btn-danger">tambah katagori</a>
+<a href="index.php" class="btn btn-danger">logout</a>
 <table class="table table-bordered" border="1">
     <tr>
         <td>No</td>
