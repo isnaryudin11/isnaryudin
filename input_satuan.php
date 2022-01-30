@@ -2,18 +2,18 @@
 include("koneksi.php");
 
 if(isset($_POST['save'])){
-$query_input=mysqli_query($koneksi,"insert into katagori (id_katagori,nama)values(
-'".$_POST['id_katagori']."',
+$query_input=mysqli_query($koneksi,"insert into satuan (id_satuan,nama)values(
+'".$_POST['id_satuan']."',
 '".$_POST['nama']."')");
 
 if($query_input){
-header('location:view_katagori.php');
+header('location:view_satuan.php');
 }else{
 }
 }
 include('header.php');
 ?>
-<h4>INPUT KATAGORI </h4>
+<h4>INPUT SATUAN </h4>
 <form method="POST">
 <table class="table table-bordered" border="1">
 	<tr>
@@ -27,3 +27,4 @@ include('header.php');
 </form>
 <?php
 include('footer.php');
+

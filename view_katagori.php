@@ -2,9 +2,10 @@
 include "koneksi.php";
 $query_view=mysqli_query($koneksi,"select * from katagori");
 
+include('header.php');
 ?>
 </br>
-<a href="input_katagori.php" class="btn btn-danger">tambah katagori</a>
+<a href="input_katagori.php" class="btn btn-primary">tambah katagori</a>
 <a href="index.php" class="btn btn-danger">logout</a>
 <table class="table table-bordered" border="1">
     <tr>
@@ -25,3 +26,5 @@ while($tampil=mysqli_fetch_array($query_view)) {?>
    </tr>
 <?php }?>
 </table>
+<?php
+include('footer.php');

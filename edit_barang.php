@@ -9,13 +9,13 @@ if($query_edit){
     header("location:view_barang.php");
 }else{
     echo mysqli_error ();
-    echo " data telah di update";
-    echo "<meta http-equiv=refresh content=2,URL='view_barang.php'>";
 }
 }
 
 $tampil=mysqli_query($koneksi,"select * from barang where id_barang='".$_GET['id_barang']."'");
 $hasil_data=mysqli_fetch_array($tampil);
+
+include('header.php');
 ?>
 
 <form method="POST">
@@ -29,7 +29,9 @@ $hasil_data=mysqli_fetch_array($tampil);
          <td>nama</td>
          <td><input type="text" name="nama" class="form-control" value="<?php echo $hasil_data['nama'];?>"></td>
     <tr>
-        <td><input type="submit" value="rubah data" name="save"> </td>
+        <td><input type="submit" class="btn btn-success" value="Rubah Barang" name="save"></td>
     </tr>
 </table>
 </form>
+<?php
+include('footer.php');
